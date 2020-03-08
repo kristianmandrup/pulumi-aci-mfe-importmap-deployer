@@ -46,13 +46,23 @@ $ npm i
 
 ### Configure importmap-deployer image
 
-Edit the `conf.js` file of the image to point to storage bucket entries.
+Edit the `conf.js` or `config.json` file of the image to point to storage bucket entries.
 Each location entry should point to an actual blob storage entry on Azure which contains an importmap JSON file.
 
-```js
-  locations: {
-    reactMf: 'http://react-microfrontends.blob.core.windows.net/importmap.json',
+Note, that you must have environment variables `AZURE_STORAGE_ACCOUNT` and `AZURE_STORAGE_ACCESS_KEY`, or `AZURE_STORAGE_CONNECTION_STRING` defined for authentication.
+
+Sample `config.json` file:
+
+```json
+{
+  "manifestFormat": "importmap",
+  "locations": {
+    "prod": {
+      "azureContainer": "static",
+      "azureBlob": "importmap.json"
+    },
   }
+}
 ```
 
 See [Azure storage blobs](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
