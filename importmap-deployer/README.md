@@ -1,11 +1,11 @@
 # live-import-map-deployer
 
-Sample repo to demonstrate how to extend the Docker Hub image `singlespa/import-map-deployer`. 
-
-The image contains a sample `conf.js` config file used when invoking `import-map-deployer`:
+Sample repo to demonstrate how to extend the Docker Hub image `singlespa/import-map-deployer`.
+The image contains a sample `conf.js` config file used when invoking `import-map-deployer`.
 
 ```sh
 $ import-map-deployer conf.js
+# ...
 ```
 
 Clone this repo and create your own `conf.js` file where location entries point to actual Azure storage blob entries.
