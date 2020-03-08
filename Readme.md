@@ -4,6 +4,8 @@ Pulumi Azure Container Instance deployment for [importmap-deployer](https://gith
 This Pulumi stack is designed to make it easy to set up Azure infrastructure for [importmap-deployer](https://github.com/single-spa/import-map-deployer).
 The importmap deployer is a service required for single-spa Micro Frontends to deploy importmaps.
 
+Watch [Deploying Microfrontends Part 1 - Import Map Deployer](https://www.youtube.com/watch?v=QHunH3MFPZs&list=PLLUD8RtHvsAOhtHnyGx57EYXoaNsxGrTU&index=5)
+
 ## Prerequisites
 
 Ensure you have [downloaded and installed the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/).
