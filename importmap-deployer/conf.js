@@ -3,9 +3,6 @@ module.exports = {
   password: process.env.HTTP_PASSWORD,
   manifestFormat: 'importmap',
   locations: {
-    reactMf: 'google://react.microfrontends.app/importmap.json',
-    vueMf: 'google://vue.microfrontends.app/importmap.json',
-    polyglotMf: 'google://polyglot.microfrontends.app/importmap.json',
-    angularMf: 'google://angular.microfrontends.app/importmap.json'
+    reactMf: 'http://react-microfrontends.blob.core.windows.net/importmap.json',
   }
 };

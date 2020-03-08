@@ -83,6 +83,19 @@ $ docker push $AZURE_REGISTRY_NAME.azurecr.io/$NAMESPACE/importmap-deployer
 # ...
 ```
 
+### Configuring importmap-deployer
+
+Edit the `conf.js` file of the image to point to bucket entries.
+Each location entry should point to an actual blob storage entry on Azure which contains an importmap JSON file.
+
+```js
+  locations: {
+    reactMf: 'http://react-microfrontends.blob.core.windows.net/importmap.json',
+  }
+```
+
+See [Azure storage blobs](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
+
 ## Run
 
 Note: output when this pulumi stack only built a bucket
