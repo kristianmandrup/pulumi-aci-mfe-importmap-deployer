@@ -31,8 +31,9 @@ The image `importmap-deployer` can be found in the folder of the same name.
 ## Quickstart
 
 1. Install dependencies
-2. Push image to Azure Container Registry (via docker)
-3. Run `pulumi up` to create stack on Azure and deploy image on service
+2. Configure `importmap-deployer` image
+3. Push image to Azure Container Registry (via docker)
+4. Run `pulumi up` to create stack on Azure and deploy image on service
 
 ### Install
 
@@ -42,6 +43,19 @@ Install dependencies
 $ npm i
 # dependencies
 ```
+
+### Configure importmap-deployer image
+
+Edit the `conf.js` file of the image to point to storage bucket entries.
+Each location entry should point to an actual blob storage entry on Azure which contains an importmap JSON file.
+
+```js
+  locations: {
+    reactMf: 'http://react-microfrontends.blob.core.windows.net/importmap.json',
+  }
+```
+
+See [Azure storage blobs](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
 
 ### Push importmap-deployer image to Azure container registry
 
@@ -84,19 +98,6 @@ $ docker build -t importmap-deployer
 $ docker push $AZURE_REGISTRY_NAME.azurecr.io/$NAMESPACE/importmap-deployer
 # ...
 ```
-
-### Configuring importmap-deployer
-
-Edit the `conf.js` file of the image to point to bucket entries.
-Each location entry should point to an actual blob storage entry on Azure which contains an importmap JSON file.
-
-```js
-  locations: {
-    reactMf: 'http://react-microfrontends.blob.core.windows.net/importmap.json',
-  }
-```
-
-See [Azure storage blobs](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
 
 ## Run
 
