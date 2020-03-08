@@ -1,0 +1,2 @@
+config:
+  azure:registry_name: micro-frontend-app

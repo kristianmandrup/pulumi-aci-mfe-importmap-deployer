@@ -1,0 +1,17 @@
+{
+  "name": "pulumi-fargate-mfe-importmap-deployer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kristian Mandrup",
+  "license": "ISC",
+  "dependencies": {
+    "@pulumi/azure": "^1.14.0",
+    "@pulumi/docker": "^1.3.0",
+    "@pulumi/pulumi": "^1.12.0"
+  }
+}
